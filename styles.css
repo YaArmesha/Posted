@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white ;
+}
+
+body {
+  background: #252525;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background: #181818;
+  width: 100%;
+  height: 4em;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  z-index: 1000;
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  color: white; 
+}
+
+.logo span {
+  color: #007bff;
+}
+
+.burger-checkbox {
+  display: none;
+}
+
+.burger {
+  display: block;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.burger::before,
+.burger::after,
+.burger div {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: white;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger div {
+  top: 10px;
+}
+
+.burger::after {
+  top: 20px;
+}
+
+.burger-checkbox:checked + .burger::before {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.burger-checkbox:checked + .burger div {
+  opacity: 0;
+}
+
+.burger-checkbox:checked + .burger::after {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.menu-list {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #151515;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  z-index: 1001; /* Установка z-index для перемещения списка выше */
+}
+
+.burger-checkbox:checked ~ .menu-list {
+  left: 0;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: none;
+  
+  transition: 0.2s ease;
+}
+
+.menu-item:hover,
+.menu-item:hover i {
+  color: #007bff;
+}
+
+.menu-item i {
+  margin-right: 10px;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  color: white;
+}
+
+.main-information {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.main-information .main .image-telegam-icon .icon-telegram {
+  max-width: 300px;
+}
+
+
+.main-information .main .main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+}
+.main-information .main .main-button .link-button {
+  padding: 0.5em 5em;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: none;
+}
+
+.employees .contaner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.employees .contaner .carde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  max-width: 320px;
+  padding: 1.5em 1.5em;
+  border: 1px solid #444;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.employees .contaner .carde .image img {
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.employees .contaner .carde .line {
+  height: 3px;
+  width: 100%;
+  background-color: #444;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.employees .contaner .carde .circle {
+  position: absolute;
+  width: 300px;
+  border-radius: 50%;
+  z-index: 10; /* Поверх изображения */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employees .contaner .carde .text {
+  max-width: 259px;
+}
+
+.employees .contaner .carde:hover {
+  transform: scale(1.04);
+  box-shadow: 5px 10px 6px rgba(59, 59, 59, 1)
+}
+
+
+
+
+/* styles.css */
+
+
+.contact {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-form-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.h2 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: black;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none; /* Hidden by default */
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.policy .text {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Стили для блока с ценами */
+
+.posted {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#plans {
+  padding: 20px;
+}
+
+/* Стили карточек */
+.card {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Стили заголовков */
+.price {
+  font-size: 24px;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+/* Стили линий */
+.line {
+  height: 2px;
+  background-color: #444;
+  margin-bottom: 10px;
+}
+
+/* Стили текста в карточках */
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Стили для ссылок */
+a.link {
+  display: inline-block;
+  color: #ffcc00;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность карточек */
+@media (max-width: 768px) {
+  .card {
+    padding: 15px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
